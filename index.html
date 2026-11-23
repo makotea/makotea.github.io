@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marianna Braun | Portafolio</title>
+<meta name="description" content="Portafolio y CV de Marianna Clarys Braun Tenorio: tecnología, robótica, liderazgo, arte e impacto social.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<style>
+:root{
+  --bg:#09060f;
+  --bg-2:#120c1d;
+  --card:#161024;
+  --line:#2a2040;
+  --text:#ece8f5;
+  --muted:#a79fbd;
+  --purple:#a855f7;
+  --purple-2:#7c3aed;
+  --purple-soft:rgba(168,85,247,.14);
+  --radius:16px;
+  --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,sans-serif;
+  line-height:1.6;
+  font-size:16px;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(600px 400px at 85% -5%, rgba(124,58,237,.28), transparent 70%),
+    radial-gradient(500px 400px at -10% 40%, rgba(168,85,247,.12), transparent 70%);
+}
+a{color:var(--purple);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* Navegación */
+nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(9,6,15,.82);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-family:"Space Grotesk";font-weight:700;font-size:1.15rem;color:var(--text)}
+.logo span{color:var(--purple)}
+.links{display:flex;gap:22px;list-style:none}
+.links a{color:var(--muted);font-size:.92rem;font-weight:500}
+.links a:hover{color:var(--text);text-decoration:none}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 10px;font-size:1rem;cursor:pointer}
+
+/* Portada */
+.hero{padding:90px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:"JetBrains Mono";font-size:.82rem;color:var(--purple);
+  background:var(--purple-soft);border:1px solid rgba(168,85,247,.35);
+  padding:5px 12px;border-radius:999px;margin-bottom:22px;
+}
+.tag .dot{width:7px;height:7px;border-radius:50%;background:var(--purple);box-shadow:0 0 10px var(--purple)}
+h1{font-family:"Space Grotesk";font-size:clamp(2.3rem,6vw,4rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:18px}
+h1 .grad{background:linear-gradient(90deg,#c084fc,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{font-size:1.12rem;color:var(--muted);max-width:620px;margin-bottom:28px}
+.subtitle strong{color:var(--text);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;
+  font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--text);background:var(--card);
+  transition:transform .15s, border-color .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--purple)}
+.btn.primary{background:linear-gradient(135deg,var(--purple),var(--purple-2));border-color:transparent;color:#fff}
+.avatar{
+  width:240px;height:240px;border-radius:50%;position:relative;
+  background:linear-gradient(135deg,var(--purple),var(--purple-2));padding:4px;
+  box-shadow:0 0 60px rgba(168,85,247,.35);
+}
+.avatar img,.avatar .initials{
+  width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--bg-2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Space Grotesk";font-size:4.5rem;font-weight:700;color:var(--purple);
+}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.stat b{display:block;font-family:"Space Grotesk";font-size:1.8rem;color:var(--purple);line-height:1.2}
+.stat span{color:var(--muted);font-size:.88rem}
+
+/* Secciones */
+section{padding:70px 0;border-top:1px solid var(--line)}
+.sec-head{margin-bottom:36px}
+.sec-head .num{font-family:"JetBrains Mono";color:var(--purple);font-size:.85rem}
+h2{font-family:"Space Grotesk";font-size:clamp(1.7rem,4vw,2.3rem);letter-spacing:-.01em}
+.sec-head p{color:var(--muted);margin-top:6px;max-width:640px}
+h3{font-family:"Space Grotesk";font-size:1.15rem;line-height:1.3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.muted{color:var(--muted)}
+
+/* Sobre mí */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+.about p + p{margin-top:14px}
+.about .lead{font-size:1.08rem}
+.facts{list-style:none;display:grid;gap:14px}
+.facts li{display:flex;gap:12px;align-items:flex-start}
+.facts .ic{font-size:1.2rem;line-height:1.4}
+.facts b{display:block;font-size:.95rem}
+.facts span{color:var(--muted);font-size:.9rem}
+
+/* Tecnología */
+.tech-feature{
+  display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin-bottom:18px;
+  background:linear-gradient(135deg,rgba(168,85,247,.16),rgba(124,58,237,.06));
+  border:1px solid rgba(168,85,247,.45);
+}
+.tech-feature i{font-size:4.2rem;color:#00979d}
+.level{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:.85rem;color:var(--muted)}
+.bar{flex:1;max-width:280px;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--purple-2),#c084fc);border-radius:99px}
+.badge{font-family:"JetBrains Mono";font-size:.75rem;color:var(--purple);background:var(--purple-soft);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.tech{
+  display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:22px 12px;
+  transition:transform .15s,border-color .15s;
+}
+.tech:hover{transform:translateY(-3px);border-color:var(--purple)}
+.tech i{font-size:2.6rem}
+.tech .lego{font-size:2.2rem;line-height:2.6rem}
+.tech b{font-size:.95rem}
+.tech small{color:var(--muted);font-size:.78rem;line-height:1.3}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:.85rem;padding:6px 13px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--bg-2)}
+
+/* Proyectos */
+.project{display:grid;grid-template-columns:1.2fr 1fr;gap:0;padding:0;overflow:hidden;margin-bottom:18px}
+.project .body{padding:30px}
+.project .kicker{font-family:"JetBrains Mono";font-size:.8rem;color:var(--purple);margin-bottom:8px}
+.project h3{font-size:1.7rem;margin-bottom:12px}
+.project p{color:var(--muted)}
+.project .steps{list-style:none;margin-top:18px;display:grid;gap:10px}
+.project .steps li{display:flex;gap:10px;font-size:.93rem}
+.project .steps li::before{content:"→";color:var(--purple);font-weight:700}
+.project .visual{
+  background:radial-gradient(circle at 50% 60%,rgba(168,85,247,.25),transparent 65%),var(--bg-2);
+  border-left:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.project .visual svg{width:100%;max-width:300px;height:auto}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+
+/* Línea de tiempo */
+.timeline{position:relative;display:grid;gap:16px}
+.item{display:grid;grid-template-columns:130px 1fr;gap:20px}
+.item .date{font-family:"JetBrains Mono";font-size:.82rem;color:var(--purple);padding-top:26px}
+.item .card h3{margin-bottom:2px}
+.item .role{color:var(--purple);font-size:.9rem;font-weight:500;margin-bottom:10px}
+.item .card p{color:var(--muted);font-size:.95rem}
+.item ul{margin:10px 0 0 18px;color:var(--muted);font-size:.95rem}
+.item li{margin-top:4px}
+.item li::marker{color:var(--purple)}
+
+.mini h3{margin-bottom:4px}
+.mini .role{color:var(--purple);font-size:.88rem;font-weight:500;margin-bottom:8px}
+.mini p{color:var(--muted);font-size:.93rem}
+.mini .yr{font-family:"JetBrains Mono";font-size:.78rem;color:var(--muted);float:right}
+
+/* Arte */
+.art .ic{font-size:1.8rem;margin-bottom:10px}
+.art h3{margin-bottom:6px}
+.art p{color:var(--muted);font-size:.93rem}
+
+/* Idiomas */
+.lang{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.lang:last-child{border-bottom:0}
+
+/* Contacto */
+.contact{text-align:center;padding:50px 24px}
+.contact h2{margin-bottom:10px}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 26px}
+.contact .cta{justify-content:center}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+
+/* Animación al hacer scroll */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* Celular y tablet */
+@media (max-width:860px){
+  .hero{padding:50px 0 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:30px}
+  .avatar{width:150px;height:150px;order:-1}
+  .avatar .initials{font-size:3rem}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .about,.grid-2,.grid-3,.project{grid-template-columns:1fr}
+  .project .visual{border-left:0;border-top:1px solid var(--line)}
+  .item{grid-template-columns:1fr;gap:4px}
+  .item .date{padding-top:0}
+  .tech-feature{grid-template-columns:1fr;text-align:left}
+  .links{
+    display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;
+    background:var(--bg);border-bottom:1px solid var(--line);
+  }
+  .links.open{display:flex}
+  .links a{display:block;padding:14px 20px}
+  .menu-btn{display:block}
+  section{padding:50px 0}
+}
+@media (max-width:420px){.wrap{padding:0 16px}.stats{gap:10px}.stat{padding:14px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Marianna<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <ul class="links" id="links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#tecnologia">Tecnología</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#trayectoria">Trayectoria</a></li>
+      <li><a href="#logros">Logros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PORTADA -->
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <div class="tag"><span class="dot"></span>Futura Ingeniera Electromecánica · UTP</div>
+      <h1>Hola, soy<br><span class="grad">Marianna Braun</span></h1>
+      <p class="subtitle">
+        <strong>Programo robots, lidero proyectos y escribo historias.</strong>
+        Soy estudiante de 12.º grado en Panamá, capitana de robótica, líder estudiantil,
+        activista social y artista. Aprendo por mi cuenta y uso la tecnología para resolver
+        problemas reales de mi comunidad.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#contacto">✉ Contáctame</a>
+        <a class="btn" href="#proyectos">Ver proyectos</a>
+        <a class="btn" href="CV-Marianna-Braun.pdf" download>⬇ Descargar CV</a>
+      </div>
+    </div>
+    <div class="avatar">
+      <!-- Para poner tu foto: sube una imagen llamada foto.jpg junto a este archivo -->
+      <img src="foto.jpg" alt="Foto de Marianna Braun" onerror="this.outerHTML='<div class=&quot;initials&quot;>MB</div>'">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>Top 5</b><span>WRO Panamá 2024 con GOWI</span></div>
+      <div class="stat"><b>+100</b><span>jóvenes impactados con talleres</span></div>
+      <div class="stat"><b>3</b><span>medallas nacionales de ajedrez</span></div>
+      <div class="stat"><b>3</b><span>idiomas: español, inglés y mandarín</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="num">01 /</div>
+      <h2>Sobre mí</h2>
+    </div>
+    <div class="about">
+      <div class="card reveal">
+        <p class="lead">Soy una persona <strong>muy autodidacta</strong>: casi todo lo que sé de programación y electrónica lo aprendí por mi cuenta, probando, equivocándome y volviendo a intentar.</p>
+        <p class="muted">Me apasionan las áreas STEM como motor de innovación. Como capitana del Club de Robótica de mi colegio he llevado equipos a finales nacionales, y como líder estudiantil he representado a mi sector en la reforma de la Ley Orgánica de Educación de Panamá.</p>
+        <p class="muted">No me defino solo por una cosa: también actúo, toco guitarra, pinto, escribo y juego ajedrez. Creo que la mejor ingeniería nace de mirar los problemas desde muchos ángulos, y por eso quiero estudiar <strong style="color:var(--text)">Ingeniería Electromecánica en la Universidad Tecnológica de Panamá</strong>.</p>
+      </div>
+      <ul class="card facts reveal">
+        <li><span class="ic">📍</span><div><b>Ciudad de Panamá</b><span>Panamá</span></div></li>
+        <li><span class="ic">🎓</span><div><b>Instituto Ferrini Bilingüe</b><span>12.º grado, en curso</span></div></li>
+        <li><span class="ic">⚙️</span><div><b>Próximo paso</b><span>Ing. Electromecánica, UTP</span></div></li>
+        <li><span class="ic">🤖</span><div><b>Capitana de Robótica</b><span>y presidenta de clase desde 9.º</span></div></li>
+        <li><span class="ic">🌱</span><div><b>Embajadora de Educación y Ambiente</b><span>Fundación Panamá Académica</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TECNOLOGÍA -->
+<section id="tecnologia">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="num">02 /</div>
+      <h2>Habilidades tecnológicas</h2>
+      <p>Lenguajes y herramientas que uso para construir, programar y hacer que las cosas funcionen en el mundo real.</p>
+    </div>
+
+    <div class="card tech-feature reveal">
+      <i class="devicon-arduino-plain"></i>
+      <div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <h3 style="font-size:1.5rem">Arduino</h3><span class="badge">★ Mi especialidad</span>
+        </div>
+        <p class="muted" style="margin-top:6px">Mi herramienta favorita. Diseño circuitos, conecto sensores y actuadores, y programo prototipos que reaccionan a su entorno, como mi proyecto GOWI.</p>
+        <div class="level"><span>Nivel</span><div class="bar"><span style="width:95%"></span></div><span>Avanzado</span></div>
+      </div>
+    </div>
+
+    <div class="tech-grid">
+      <div class="card tech reveal"><i class="devicon-cplusplus-plain colored"></i><b>C++</b><small>Programación de microcontroladores</small></div>
+      <div class="card tech reveal"><i class="devicon-python-plain colored"></i><b>Python</b><small>Lógica, datos y automatización</small></div>
+      <div class="card tech reveal"><i class="devicon-java-plain colored"></i><b>Java</b><small>Programación orientada a objetos</small></div>
+      <div class="card tech reveal"><i class="devicon-html5-plain colored"></i><b>HTML</b><small>Estructura de páginas web</small></div>
+      <div class="card tech reveal"><i class="devicon-css3-plain colored"></i><b>CSS</b><small>Diseño y estilo web</small></div>
+      <div class="card tech reveal"><span class="lego">🧱</span><b>LEGO SPIKE</b><small>Robótica educativa y competencias</small></div>
+    </div>
+
+    <div class="chips reveal">
+      <span class="chip">Robótica aplicada</span>
+      <span class="chip">Sensores y electrónica</span>
+      <span class="chip">Prototipado</span>
+      <span class="chip">Ciencia de datos (becaria)</span>
+      <span class="chip">Aprendizaje autodidacta</span>
+      <span class="chip">Trabajo en equipo técnico</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="num">03 /</div>
+      <h2>Proyectos</h2>
+      <p>Tecnología y liderazgo puestos al servicio de problemas reales.</p>
+    </div>
+
+    <article class="card project reveal">
+      <div class="body">
+        <div class="kicker">// robótica · WRO Panamá 2024 · Top 5 nacional</div>
+        <h3>GOWI</h3>
+        <p>Sistema de alerta temprana para alcantarillas. Detecta cuándo una alcantarilla está tapada y avisa <strong style="color:var(--text)">antes de que llueva</strong>, para que se pueda limpiar a tiempo y evitar que se derrame e inunde la calle.</p>
+        <ul class="steps">
+          <li>Sensores de agua miden el nivel y la sensibilidad dentro de la alcantarilla.</li>
+          <li>El sistema detecta si el agua no está drenando como debería.</li>
+          <li>Envía un aviso anticipado antes de que llegue la lluvia.</li>
+        </ul>
+        <p style="margin-top:18px">Lo codiseñé y programé con mi equipo, y con él llegamos a la <strong style="color:var(--text)">final nacional de la World Robot Olympiad 2024</strong>, entre los 5 mejores equipos de robótica de Panamá.</p>
+        <div class="tags">
+          <span class="badge">WRO 2024 · Top 5</span><span class="badge">Arduino</span><span class="badge">Sensores</span><span class="badge">Prevención de inundaciones</span><span class="badge">Impacto comunitario</span>
+        </div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <svg viewBox="0 0 300 220" fill="none">
+          <path d="M40 40 q10 -18 28 -10 q8 -16 26 -6 q16 -4 18 12 q14 4 6 16 h-74 q-14 -4 -4 -12z" fill="#2a2040" stroke="#a79fbd" stroke-width="1.5"/>
+          <g stroke="#a855f7" stroke-width="2" stroke-linecap="round"><line x1="58" y1="70" x2="54" y2="82"/><line x1="76" y1="70" x2="72" y2="82"/><line x1="94" y1="70" x2="90" y2="82"/></g>
+          <rect x="20" y="110" width="260" height="12" rx="2" fill="#2a2040"/>
+          <rect x="110" y="110" width="80" height="12" fill="#09060f"/>
+          <g stroke="#a79fbd" stroke-width="2"><line x1="120" y1="110" x2="120" y2="122"/><line x1="135" y1="110" x2="135" y2="122"/><line x1="150" y1="110" x2="150" y2="122"/><line x1="165" y1="110" x2="165" y2="122"/><line x1="180" y1="110" x2="180" y2="122"/></g>
+          <rect x="110" y="122" width="80" height="80" rx="4" stroke="#2a2040" stroke-width="2" fill="#120c1d"/>
+          <rect x="112" y="160" width="76" height="40" rx="2" fill="rgba(124,58,237,.35)"/>
+          <path d="M112 160 q10 -5 19 0 t19 0 t19 0 t19 0" stroke="#c084fc" stroke-width="1.5"/>
+          <rect x="176" y="134" width="10" height="34" rx="2" fill="#a855f7"/>
+          <circle cx="181" cy="140" r="2" fill="#09060f"/>
+          <line x1="186" y1="140" x2="226" y2="80" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <rect x="214" y="40" width="64" height="40" rx="8" fill="#161024" stroke="#a855f7" stroke-width="1.5"/>
+          <text x="246" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#c084fc">⚠ ALERTA</text>
+          <text x="246" y="71" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#a79fbd">tapada</text>
+        </svg>
+      </div>
+    </article>
+
+    <div>
+      <article class="card mini reveal">
+        <span class="yr">2025 – 2026</span>
+        <div class="kicker" style="font-family:JetBrains Mono;font-size:.8rem;color:var(--purple);margin-bottom:6px">// impacto social</div>
+        <h3>Proyecto ALAS</h3>
+        <div class="role">Cofundadora y Coordinadora General</div>
+        <p>Nació en LLAC. Más de 5 talleres sobre educación integral en sexualidad, prevención del abuso e igualdad, que llegaron a más de 100 jóvenes en todo el país.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TRAYECTORIA -->
+<section id="trayectoria">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="num">04 /</div>
+      <h2>Trayectoria</h2>
+      <p>STEM, liderazgo cívico e impacto en la comunidad.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="item reveal">
+        <div class="date">2024 – 2025</div>
+        <div class="card">
+          <h3>Misión Aeroespacial ShakthiSAT y becas tecnológicas</h3>
+          <div class="role">Becaria en aeroespacial, ciencia de datos y STEM</div>
+          <p>Seleccionada para la misión espacial global ShakthiSAT. Beca en Ciencia de Datos de Fundación Televisa y Tecnolochicas, y beca académica STEM por mi desempeño en WRO, donde obtuve el primer lugar en la asignación de becas.</p>
+        </div>
+      </div>
+      <div class="item reveal">
+        <div class="date">2023</div>
+        <div class="card">
+          <h3>Competencia GoRobotics</h3>
+          <div class="role">3.er lugar regional · Expositora en feria científica</div>
+        </div>
+      </div>
+      <div class="item reveal">
+        <div class="date">2025 – 2026</div>
+        <div class="card">
+          <h3>Laboratorio Latinoamericano de Acción Ciudadana (LLAC)</h3>
+          <div class="role">Egresada de LLAC 2025 y LLAC 2.0 · Coordinadora General</div>
+          <p>Incubadora de alto impacto donde jóvenes líderes de todo Panamá se forman como agentes de cambio cívico. Ahí cofundé y coordiné el Proyecto ALAS.</p>
+        </div>
+      </div>
+      <div class="item reveal">
+        <div class="date">2025 – 2026</div>
+        <div class="card">
+          <h3>Reforma a la Ley Orgánica de Educación (Proyecto de Ley 617)</h3>
+          <div class="role">Representante principal del sector estudiantil</div>
+          <p>Participé en las discusiones legislativas nacionales defendiendo los derechos estudiantiles, la modernización de la infraestructura escolar, sistemas obligatorios de apoyo en salud mental y la representación juvenil en la gobernanza educativa.</p>
+        </div>
+      </div>
+      <div class="item reveal">
+        <div class="date">2024 – hoy</div>
+        <div class="card">
+          <h3>Fundación Panamá Académica</h3>
+          <div class="role">Embajadora de Educación y Ambiente · Nominada a Voluntaria Destacada</div>
+          <ul>
+            <li>Más de 10 jornadas comunitarias de reciclaje</li>
+            <li>4 reforestaciones</li>
+            <li>Más de 5 ferias educativas públicas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item reveal">
+        <div class="date">2025</div>
+        <div class="card">
+          <h3>3.er Concurso Regional de Emprendimiento Juvenil</h3>
+          <div class="role">3.er lugar regional</div>
+          <p>Iniciativa sostenible que usa el turismo rural como motor de empleo local y de descentralización económica en Panamá.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:28px">
+      <div class="card reveal">
+        <h3 style="margin-bottom:14px">🎓 Educación</h3>
+        <div class="mini" style="margin-bottom:14px">
+          <h3 style="font-size:1rem">Instituto Ferrini Bilingüe Panamá</h3>
+          <p>Bachillerato, 8.º a 12.º grado (en curso). Presidenta de clase desde 9.º, capitana de Robótica y campeona invicta de ajedrez interno.</p>
+        </div>
+        <div class="mini" style="margin-bottom:14px">
+          <h3 style="font-size:1rem">C.E.B.G. de Chitra</h3>
+          <p>7.º grado</p>
+        </div>
+        <div class="mini">
+          <h3 style="font-size:1rem">Colonias Adventist School</h3>
+          <p>Educación primaria</p>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h3 style="margin-bottom:6px">🌎 Idiomas</h3>
+        <div class="lang"><span>Español</span><span class="badge">Nativo</span></div>
+        <div class="lang"><span>Inglés</span><span class="badge">Nativo</span></div>
+        <div class="lang"><span>Chino mandarín</span><span class="badge">Básico 2</span></div>
+        <h3 style="margin:22px 0 10px">📚 Seminarios y cumbres</h3>
+        <p class="muted" style="font-size:.93rem">Congreso IEEE AI TODAY (USMA) · Next Human Summit, Innovanation · CAJA 2026 · Foro de Reforma Educativa · Perspectivas Económicas 2026 · Youth Alliance, «Jóvenes que Inspiran»</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGROS -->
+<section id="logros">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="num">05 /</div>
+      <h2>Logros, voz y arte</h2>
+      <p>Lo que hago fuera del laboratorio también me define.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card mini reveal"><span class="yr">2024</span><h3>♟ Ajedrez</h3><div class="role">2 oros y 1 bronce</div><p>VII Juegos Nacionales Juveniles. 4.ª mejor jugadora de tablero del país.</p></div>
+      <div class="card mini reveal"><span class="yr">2026</span><h3>🎤 Oratoria</h3><div class="role">Top 61 nacional</div><p>Concurso Nacional de Oratoria, el principal del país.</p></div>
+      <div class="card mini reveal"><span class="yr">2026</span><h3>✍ Cuento ganador</h3><div class="role">Palabras Poderosas</div><p>«Vergüenza con olor a metal», seleccionado para una antología.</p></div>
+      <div class="card mini reveal"><span class="yr">2026</span><h3>📰 Columnista</h3><div class="role">Diario La Prensa</div><p>«Escuelas que cuidan: de la prevención a la acción por una cultura de paz».</p></div>
+      <div class="card mini reveal"><span class="yr">2025</span><h3>📻 Radio</h3><div class="role">Radio Ancón y Radio UMECIT</div><p>Invitada para hablar del Proyecto ALAS y de educación ambiental.</p></div>
+      <div class="card mini reveal"><span class="yr">2023</span><h3>📖 Autora publicada</h3><div class="role">«500 Historias», Tomo 2</div><p>Coautora de una crónica de viaje.</p></div>
+      <div class="card mini reveal"><span class="yr">2017 – 21</span><h3>🥋 Karate</h3><div class="role">+20 medallas</div><p>75 % de ellas de oro.</p></div>
+      <div class="card mini reveal"><span class="yr">2022</span><h3>💬 Debate en inglés</h3><div class="role">AMCO · Top 8 regional</div><p>Competencia de debate por equipos.</p></div>
+      <div class="card mini reveal"><span class="yr">2025</span><h3>🎙 Maestra de ceremonias</h3><div class="role">Acto Patrio del 10 de Noviembre</div><p>Asociación Cívica de Santeños de San Miguelito.</p></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:18px">
+      <div class="card art reveal"><div class="ic">🎭</div><h3>Actuación</h3><p>Papeles protagónicos en cortometrajes y producciones independientes, con premios a mejor actuación. Personaje principal del grupo de baile y desfile del colegio (1.er lugar 2024).</p></div>
+      <div class="card art reveal"><div class="ic">🎸</div><h3>Música y artes plásticas</h3><p>Guitarra eléctrica y acústica, bajo, melódica y canto en recitales. 7 años de pintura acrílica, arte digital y manualidades.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="card contact reveal">
+      <div class="num" style="font-family:JetBrains Mono;color:var(--purple);font-size:.85rem">06 /</div>
+      <h2>Hablemos</h2>
+      <p>¿Un proyecto, una competencia o una idea para cambiar algo? Escríbeme.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:mariannaclarysbrauntenorio@gmail.com">✉ Correo</a>
+        <a class="btn" href="https://www.instagram.com/mariannabraunn" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://github.com/TU-USUARIO" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Hecho por Marianna Braun · Ciudad de Panamá · <span id="year"></span></div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const btn = document.getElementById('menuBtn'), links = document.getElementById('links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
